@@ -42,9 +42,9 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void reportError(String message, @Nullable ReadableMap params) {
+    public void reportError(String message, @Nullable String params) {
         if (params != null) {
-            YandexMetrica.reportError(message, new Throwable(convertReadableMapToJson(params)));
+            YandexMetrica.reportError(message, new Throwable(params));
         }
         else {
             YandexMetrica.reportError(message, new Throwable());
