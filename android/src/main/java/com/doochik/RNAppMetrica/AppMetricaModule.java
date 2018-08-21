@@ -16,6 +16,7 @@ import java.lang.Exception;
 import org.json.JSONObject;
 
 import com.yandex.metrica.YandexMetrica;
+import com.yandex.metrica.YandexMetricaConfig;
 
 public class AppMetricaModule extends ReactContextBaseJavaModule {
     final static String ModuleName = "AppMetrica";
