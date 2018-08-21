@@ -1,6 +1,6 @@
 {
   "name": "react-native-appmetrica",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Native bridge to the AppMetrica on both iOS and Android",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
-    "eslint": "^4.7.0",
+    "eslint": "^5.3.0",
     "eslint-plugin-flowtype": "^2.37.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-react-native": "^3.1.0",

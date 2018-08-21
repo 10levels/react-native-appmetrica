@@ -32,7 +32,8 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void activateWithApiKey(String key) {
-        YandexMetrica.activate(getReactApplicationContext().getApplicationContext(), key);
+        YandexMetricaConfig.Builder configBuilder = YandexMetricaConfig.newConfigBuilder(key);
+        YandexMetrica.activate(getReactApplicationContext().getApplicationContext(), configBuilder.build());
 
         Activity activity = getCurrentActivity();
         if (activity != null) {
@@ -58,6 +59,11 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
         } else {
             YandexMetrica.reportEvent(message);
         }
+    }
+
+    @ReactMethod
+    public void setUserProfileID(String profileID) {
+        YandexMetrica.setUserProfileID(profileID);
     }
 
     private String convertReadableMapToJson(final ReadableMap readableMap) {
