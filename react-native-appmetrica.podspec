@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.dependency      'React'
 
   s.subspec 'AppMetrica' do |ss|
-    ss.dependency     'YandexMobileMetrica'
+    ss.dependency     'YandexMobileMetrica', '3.7.1'
     ss.source_files = 'ios/RCTAppMetrica/RCTAppMetrica/*.{h,m}'
   end
 end
